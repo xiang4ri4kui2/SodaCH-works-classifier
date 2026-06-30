@@ -1,0 +1,49 @@
+name: Detect Unclassified Videos
+
+on:
+  workflow_dispatch: 
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run detection script
+        id: detect
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/detectUnclassified.js
+
+      - name: Create Issue if unclassified videos found
+        if: steps.detect.outputs.has_unclassified == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "${{ steps.detect.outputs.issue_title }}" \
+            --body-file issue-body.md \
+            --label "未分類動画"
+
+      - name: Commit worksMaster.json (lastCheckedAt update)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/worksMaster.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update worksMaster.json lastCheckedAt"
+            git push
+          fi
