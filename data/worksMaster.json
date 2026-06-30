@@ -18,8 +18,11 @@
       "category": "game",
       "url": "https://umamusume.jp/",
       "patterns": [
-        "ウマ娘", "ウマ娘プリティーダービー", "ウマ娘プリティダービー",
-        "プリティーダービー", "ワシソダービー"
+        "ウマ娘",
+        "ウマ娘プリティーダービー",
+        "ウマ娘プリティダービー",
+        "プリティーダービー",
+        "ワシソダービー"
       ]
     },
     {
@@ -28,9 +31,16 @@
       "category": "game",
       "url": "https://www.dragonquest.jp/dq7r/",
       "patterns": [
-        "ドラクエ7", "ドラクエ７", "ドラクエVII",
-        "ドラゴンクエスト7", "ドラゴンクエスト７", "ドラゴンクエストVII",
-        "DQ7", "ＤＱ７", "DQⅦ", "エデンの戦士"
+        "ドラクエ7",
+        "ドラクエ７",
+        "ドラクエVII",
+        "ドラゴンクエスト7",
+        "ドラゴンクエスト７",
+        "ドラゴンクエストVII",
+        "DQ7",
+        "ＤＱ７",
+        "DQⅦ",
+        "エデンの戦士"
       ]
     },
     {
@@ -39,10 +49,16 @@
       "category": "game",
       "url": "http://www.dragonquest.jp/builders2/",
       "patterns": [
-        "ドラゴンクエストビルダーズ２", "ドラゴンクエストビルダーズ2",
-        "ドラクエビルダーズ２", "ドラクエビルダーズ2",
-        "DQB2", "DQB２", "ビルダーズ２", "ビルダーズ2",
-        "からっぽ島", "破壊神シドー"
+        "ドラゴンクエストビルダーズ２",
+        "ドラゴンクエストビルダーズ2",
+        "ドラクエビルダーズ２",
+        "ドラクエビルダーズ2",
+        "DQB2",
+        "DQB２",
+        "ビルダーズ２",
+        "ビルダーズ2",
+        "からっぽ島",
+        "破壊神シドー"
       ]
     },
     {
@@ -51,8 +67,11 @@
       "category": "game",
       "url": "https://www.dragonquest.jp/builders/",
       "patterns": [
-        "ドラゴンクエストビルダーズ", "ドラクエビルダーズ",
-        "DQB1", "ソダクエビルダーズ", "ビルダーズ"
+        "ドラゴンクエストビルダーズ",
+        "ドラクエビルダーズ",
+        "DQB1",
+        "ソダクエビルダーズ",
+        "ビルダーズ"
       ]
     },
     {
@@ -61,9 +80,12 @@
       "category": "game",
       "url": "https://www.konami.com/pawa/2022/",
       "patterns": [
-        "パワプロ2022", "パワプロ２０２２",
-        "実況パワフルプロ野球2022", "実況パワフルプロ野球２０２２",
-        "eBASEBALLパワフルプロ野球2022", "パワフルプロ野球2022"
+        "パワプロ2022",
+        "パワプロ２０２２",
+        "実況パワフルプロ野球2022",
+        "実況パワフルプロ野球２０２２",
+        "eBASEBALLパワフルプロ野球2022",
+        "パワフルプロ野球2022"
       ]
     },
     {
@@ -72,8 +94,10 @@
       "category": "game",
       "url": "https://www.konami.com/pawa/wbsc/ja/",
       "patterns": [
-        "パワプロ2023", "パワプロ２０２３",
-        "実況パワフルプロ野球2023", "eBASEBALLパワフルプロ野球2023"
+        "パワプロ2023",
+        "パワプロ２０２３",
+        "実況パワフルプロ野球2023",
+        "eBASEBALLパワフルプロ野球2023"
       ]
     },
     {
@@ -82,8 +106,12 @@
       "category": "game",
       "url": "https://digimonstory.bn-ent.net/",
       "patterns": [
-        "サイバースルゥース", "サイスル", "ハカメモ", "ハッカーズメモリー",
-        "サイバースルース", "デジモンストーリーサイバースルゥース"
+        "サイバースルゥース",
+        "サイスル",
+        "ハカメモ",
+        "ハッカーズメモリー",
+        "サイバースルース",
+        "デジモンストーリーサイバースルゥース"
       ]
     },
     {
@@ -92,8 +120,10 @@
       "category": "game",
       "url": "https://dn-kw.bn-ent.net/",
       "patterns": [
-        "DEATH NOTE Killer Within", "デスノート人狼",
-        "デスノ人狼", "デスノート"
+        "DEATH NOTE Killer Within",
+        "デスノート人狼",
+        "デスノ人狼",
+        "デスノート"
       ]
     },
     {
@@ -102,8 +132,12 @@
       "category": "game",
       "url": "https://www.innersloth.com/games/among-us/",
       "patterns": [
-        "アモングアス", "アモアス", "Among Us", "among us",
-        "アマンガス", "宇宙人狼"
+        "アモングアス",
+        "アモアス",
+        "Among Us",
+        "among us",
+        "アマンガス",
+        "宇宙人狼"
       ]
     },
     {
@@ -112,8 +146,10 @@
       "category": "game",
       "url": "https://www.konami.com/pawa/pawapoke_r/",
       "patterns": [
-        "パワポケR", "パワポケＲ",
-        "パワプロクンポケットR", "パワプロクンポケットＲ"
+        "パワポケR",
+        "パワポケＲ",
+        "パワプロクンポケットR",
+        "パワプロクンポケットＲ"
       ]
     },
     {
@@ -122,8 +158,10 @@
       "category": "game",
       "url": "https://www.konami.com/pawa/pawapoke_r/",
       "patterns": [
-        "パワポケ2", "パワポケ２",
-        "パワプロクンポケット2", "パワプロクンポケット２"
+        "パワポケ2",
+        "パワポケ２",
+        "パワプロクンポケット2",
+        "パワプロクンポケット２"
       ]
     },
     {
@@ -132,7 +170,9 @@
       "category": "game",
       "url": "https://www.konami.com/pawa/pawapoke_r/",
       "patterns": [
-        "パワポケ5", "パワポケ５", "パワプロクンポケット５"
+        "パワポケ5",
+        "パワポケ５",
+        "パワプロクンポケット５"
       ]
     },
     {
@@ -141,9 +181,16 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/game/detail/dq6/",
       "patterns": [
-        "ドラクエ6", "ドラクエ６", "ドラクエVI",
-        "ドラゴンクエスト6", "ドラゴンクエスト６", "ドラゴンクエストVI",
-        "DQ6", "ＤＱ６", "DQⅥ", "幻の大地"
+        "ドラクエ6",
+        "ドラクエ６",
+        "ドラクエVI",
+        "ドラゴンクエスト6",
+        "ドラゴンクエスト６",
+        "ドラゴンクエストVI",
+        "DQ6",
+        "ＤＱ６",
+        "DQⅥ",
+        "幻の大地"
       ]
     },
     {
@@ -152,8 +199,12 @@
       "category": "manga",
       "url": "https://yudetamago.jp/",
       "patterns": [
-        "キン肉マン", "KINNNIKUMAN", "キン肉スグル",
-        "完璧超人", "悪魔超人", "肉の時間"
+        "キン肉マン",
+        "KINNNIKUMAN",
+        "キン肉スグル",
+        "完璧超人",
+        "悪魔超人",
+        "肉の時間"
       ]
     },
     {
@@ -162,9 +213,13 @@
       "category": "game",
       "url": "https://www.nintendo.com/jp/switch/anvya/",
       "patterns": [
-        "ファイアーエムブレム風花雪月", "ファイアーエンブレム風花雪月",
-        "ファイヤーエムブレム風花雪月", "風花雪月",
-        "FIRE EMBLEM風花雪月", "金鹿の学級", "金鹿"
+        "ファイアーエムブレム風花雪月",
+        "ファイアーエンブレム風花雪月",
+        "ファイヤーエムブレム風花雪月",
+        "風花雪月",
+        "FIRE EMBLEM風花雪月",
+        "金鹿の学級",
+        "金鹿"
       ]
     },
     {
@@ -173,9 +228,15 @@
       "category": "game",
       "url": "https://www.dragonquest.jp/roto-trilogy/",
       "patterns": [
-        "ドラクエ3", "ドラクエ３", "ドラクエIII",
-        "ドラゴンクエスト3", "ドラゴンクエスト３", "ドラゴンクエストIII",
-        "DQ3", "ＤＱ３", "そして伝説へ"
+        "ドラクエ3",
+        "ドラクエ３",
+        "ドラクエIII",
+        "ドラゴンクエスト3",
+        "ドラゴンクエスト３",
+        "ドラゴンクエストIII",
+        "DQ3",
+        "ＤＱ３",
+        "そして伝説へ"
       ]
     },
     {
@@ -184,7 +245,9 @@
       "category": "game",
       "url": "https://www.megacrit.com/",
       "patterns": [
-        "slay the spire", "Slay the Spire", "スレスパ"
+        "slay the spire",
+        "Slay the Spire",
+        "スレスパ"
       ]
     },
     {
@@ -193,7 +256,8 @@
       "category": "game",
       "url": "https://digimonstory-ts.bn-ent.net/",
       "patterns": [
-        "タイムストレンジャー", "タイスト",
+        "タイムストレンジャー",
+        "タイスト",
         "デジモンストーリータイムストレンジャー"
       ]
     },
@@ -203,7 +267,12 @@
       "category": "game",
       "url": "https://mahjongsoul.com/",
       "patterns": [
-        "雀魂", "ジャンタマ", "じゃんたま", "麻雀", "マージャン", "参加型雀魂"
+        "雀魂",
+        "ジャンタマ",
+        "じゃんたま",
+        "麻雀",
+        "マージャン",
+        "参加型雀魂"
       ]
     },
     {
@@ -212,7 +281,8 @@
       "category": "game",
       "url": "https://store.steampowered.com/app/568220/",
       "patterns": [
-        "ロボトミーコーポレーション", "LobotomyCorporation",
+        "ロボトミーコーポレーション",
+        "LobotomyCorporation",
         "Lobotomy Corporation"
       ]
     },
@@ -222,9 +292,16 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/game/detail/dq4/",
       "patterns": [
-        "ドラクエ4", "ドラクエ４", "ドラクエIV",
-        "ドラゴンクエスト4", "ドラゴンクエスト４", "ドラゴンクエストIV",
-        "DQ4", "ＤＱ４", "DQⅣ", "導かれし者たち"
+        "ドラクエ4",
+        "ドラクエ４",
+        "ドラクエIV",
+        "ドラゴンクエスト4",
+        "ドラゴンクエスト４",
+        "ドラゴンクエストIV",
+        "DQ4",
+        "ＤＱ４",
+        "DQⅣ",
+        "導かれし者たち"
       ]
     },
     {
@@ -233,7 +310,9 @@
       "category": "game",
       "url": "https://gakuen.idolmaster-official.jp/",
       "patterns": [
-        "学園アイドルマスター", "学マス", "IDOL M@STER"
+        "学園アイドルマスター",
+        "学マス",
+        "IDOL M@STER"
       ]
     },
     {
@@ -242,8 +321,10 @@
       "category": "game",
       "url": "https://shinycolors.idolmaster-official.jp/",
       "patterns": [
-        "アイドルマスターシャイニーカラーズ", "IDOLM@STER SHINYCOLORS",
-        "IDOLM@STER Shiny colors", "シャニマス"
+        "アイドルマスターシャイニーカラーズ",
+        "IDOLM@STER SHINYCOLORS",
+        "IDOLM@STER Shiny colors",
+        "シャニマス"
       ]
     },
     {
@@ -252,8 +333,12 @@
       "category": "game",
       "url": "https://www.ace-attorney.com/trilogy/",
       "patterns": [
-        "逆転裁判", "逆裁", "成歩堂龍一", "成歩堂セレクション",
-        "御剣怜侍", "蘇る逆転"
+        "逆転裁判",
+        "逆裁",
+        "成歩堂龍一",
+        "成歩堂セレクション",
+        "御剣怜侍",
+        "蘇る逆転"
       ]
     },
     {
@@ -262,8 +347,12 @@
       "category": "game",
       "url": "https://www.darksouls.jp/remastered/",
       "patterns": [
-        "ダークソウル", "ダクソ", "DARK SOUL",
-        "ダークソウルリマスター", "フロムゲー", "フロムソフトウェア"
+        "ダークソウル",
+        "ダクソ",
+        "DARK SOUL",
+        "ダークソウルリマスター",
+        "フロムゲー",
+        "フロムソフトウェア"
       ]
     },
     {
@@ -272,9 +361,16 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/game/detail/dq5/",
       "patterns": [
-        "ドラクエ5", "ドラクエ５", "ドラクエV",
-        "ドラゴンクエスト5", "ドラゴンクエスト５", "ドラゴンクエストV",
-        "DQ5", "ＤＱ５", "DQⅤ", "天空の花嫁"
+        "ドラクエ5",
+        "ドラクエ５",
+        "ドラクエV",
+        "ドラゴンクエスト5",
+        "ドラゴンクエスト５",
+        "ドラゴンクエストV",
+        "DQ5",
+        "ＤＱ５",
+        "DQⅤ",
+        "天空の花嫁"
       ]
     },
     {
@@ -283,8 +379,10 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/fft_tic/",
       "patterns": [
-        "ファイナルファンタジータクティクス", "FFT",
-        "イヴァリースクロニクルズ", "イヴァリース クロニクルズ"
+        "ファイナルファンタジータクティクス",
+        "FFT",
+        "イヴァリースクロニクルズ",
+        "イヴァリース クロニクルズ"
       ]
     },
     {
@@ -293,8 +391,10 @@
       "category": "game",
       "url": "https://manosaba.com/",
       "patterns": [
-        "魔法少女ノ魔女裁判", "まのさば",
-        "魔法少女の魔女裁判", "魔女裁判"
+        "魔法少女ノ魔女裁判",
+        "まのさば",
+        "魔法少女の魔女裁判",
+        "魔女裁判"
       ]
     },
     {
@@ -303,9 +403,12 @@
       "category": "game",
       "url": "https://jp.finalfantasyxiv.com/",
       "patterns": [
-        "FF14", "ＦＦ１４",
-        "ファイナルファンタジー14", "ファイナルファンタジー１４",
-        "ファイファン14", "ファイファン１４"
+        "FF14",
+        "ＦＦ１４",
+        "ファイナルファンタジー14",
+        "ファイナルファンタジー１４",
+        "ファイファン14",
+        "ファイファン１４"
       ]
     },
     {
@@ -314,9 +417,13 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/ff_pixelremaster/",
       "patterns": [
-        "FF2", "ＦＦ２",
-        "ファイナルファンタジー2", "ファイナルファンタジー２",
-        "ファイファン2", "ファイファン２", "FINAL FANTASY2"
+        "FF2",
+        "ＦＦ２",
+        "ファイナルファンタジー2",
+        "ファイナルファンタジー２",
+        "ファイファン2",
+        "ファイファン２",
+        "FINAL FANTASY2"
       ]
     },
     {
@@ -325,9 +432,13 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/ff_pixelremaster/",
       "patterns": [
-        "FF1", "ＦＦ１",
-        "ファイナルファンタジー1", "ファイナルファンタジー１",
-        "ファイファン1", "ファイファン１", "FINAL FANTASY1"
+        "FF1",
+        "ＦＦ１",
+        "ファイナルファンタジー1",
+        "ファイナルファンタジー１",
+        "ファイファン1",
+        "ファイファン１",
+        "FINAL FANTASY1"
       ]
     },
     {
@@ -336,7 +447,10 @@
       "category": "game",
       "url": "https://ryu-ga-gotoku.com/kiwami/",
       "patterns": [
-        "龍が如く", "龍が如く 極", "龍が如く極", "桐生一馬"
+        "龍が如く",
+        "龍が如く 極",
+        "龍が如く極",
+        "桐生一馬"
       ]
     },
     {
@@ -345,8 +459,12 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/lal/",
       "patterns": [
-        "ライブアライブ", "ライブ・ア・ライブ", "LIVE A LIVE", "LIVE ALIVE",
-        "あの世で俺に侘び続けるRPG", "あの世で俺にわび続けるRPG"
+        "ライブアライブ",
+        "ライブ・ア・ライブ",
+        "LIVE A LIVE",
+        "LIVE ALIVE",
+        "あの世で俺に侘び続けるRPG",
+        "あの世で俺にわび続けるRPG"
       ]
     },
     {
@@ -355,7 +473,9 @@
       "category": "game",
       "url": "https://www.minecraft.net/ja-jp",
       "patterns": [
-        "マインクラフト", "マイクラ", "Minecraft"
+        "マインクラフト",
+        "マイクラ",
+        "Minecraft"
       ]
     },
     {
@@ -364,7 +484,8 @@
       "category": "game",
       "url": "https://store.steampowered.com/app/379720/",
       "patterns": [
-        "DOOM", "ドゥーム"
+        "DOOM",
+        "ドゥーム"
       ]
     },
     {
@@ -373,7 +494,9 @@
       "category": "game",
       "url": "https://digimon-sur.bn-ent.net/",
       "patterns": [
-        "デジモンサヴァイブ", "DIGIMON SURVIVE", "サヴァイブ"
+        "デジモンサヴァイブ",
+        "DIGIMON SURVIVE",
+        "サヴァイブ"
       ]
     },
     {
@@ -382,7 +505,9 @@
       "category": "game",
       "url": "https://hpgames.jp/dolphin-wave/",
       "patterns": [
-        "ドルフィンウェーブ", "ドルウェブ", "どるふぃんうぇーぶ"
+        "ドルフィンウェーブ",
+        "ドルウェブ",
+        "どるふぃんうぇーぶ"
       ]
     },
     {
@@ -391,7 +516,9 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/chronotrigger/",
       "patterns": [
-        "クロノ・トリガー", "クロノトリガー", "CHRONO TRIGGER"
+        "クロノ・トリガー",
+        "クロノトリガー",
+        "CHRONO TRIGGER"
       ]
     },
     {
@@ -400,7 +527,10 @@
       "category": "game",
       "url": "https://www.nintendo.com/jp/switch/av5ja/",
       "patterns": [
-        "スプラトゥーン", "スプラトゥーン３", "スプラトゥーン3", "Splatoon3"
+        "スプラトゥーン",
+        "スプラトゥーン３",
+        "スプラトゥーン3",
+        "Splatoon3"
       ]
     },
     {
@@ -409,7 +539,10 @@
       "category": "game",
       "url": "https://www.nintendo.co.jp/switch/aabpa/",
       "patterns": [
-        "マリオカート", "マリカー", "マリカ", "mariokart"
+        "マリオカート",
+        "マリカー",
+        "マリカ",
+        "mariokart"
       ]
     },
     {
@@ -418,8 +551,11 @@
       "category": "game",
       "url": "https://www.d3p.co.jp/edf5/",
       "patterns": [
-        "地球防衛軍", "地球防衛軍5", "地球防衛軍５",
-        "EARTH DEFENSE FORCES5", "EARTH DEFENSE FORCES"
+        "地球防衛軍",
+        "地球防衛軍5",
+        "地球防衛軍５",
+        "EARTH DEFENSE FORCES5",
+        "EARTH DEFENSE FORCES"
       ]
     },
     {
@@ -428,7 +564,10 @@
       "category": "manga",
       "url": "https://ja.wikipedia.org/wiki/%E9%AD%94%E6%B3%95%E5%85%88%E7%94%9F%E3%83%8D%E3%82%AE%E3%81%BE!",
       "patterns": [
-        "魔法先生ネギま", "ネギま！", "ネギま", "ネギま!"
+        "魔法先生ネギま",
+        "ネギま！",
+        "ネギま",
+        "ネギま!"
       ]
     },
     {
@@ -437,7 +576,8 @@
       "category": "game",
       "url": "https://playism.com/game/marfusha/",
       "patterns": [
-        "溶鉄のマルフーシャ", "マルフーシャ"
+        "溶鉄のマルフーシャ",
+        "マルフーシャ"
       ]
     },
     {
@@ -446,8 +586,10 @@
       "category": "game",
       "url": "https://store.steampowered.com/app/1222140/",
       "patterns": [
-        "Detroit Become Human", "Detroit: Become Human",
-        "デトロイトビカムヒューマン", "DBH"
+        "Detroit Become Human",
+        "Detroit: Become Human",
+        "デトロイトビカムヒューマン",
+        "DBH"
       ]
     },
     {
@@ -456,7 +598,9 @@
       "category": "game",
       "url": "https://www.nintendo.com/jp/ring/",
       "patterns": [
-        "リングフィットアドベンチャー", "Ring Fit Adventure", "RFA"
+        "リングフィットアドベンチャー",
+        "Ring Fit Adventure",
+        "RFA"
       ]
     },
     {
@@ -465,7 +609,10 @@
       "category": "game",
       "url": "https://www.capcom-games.com/product/ja-jp/megaman-legacycollection12/",
       "patterns": [
-        "ロックマン", "ROCKMAN", "MEGAMAN", "ロックマンクラシックコレクション"
+        "ロックマン",
+        "ROCKMAN",
+        "MEGAMAN",
+        "ロックマンクラシックコレクション"
       ]
     },
     {
@@ -474,7 +621,10 @@
       "category": "game",
       "url": "https://2kgames.jp/civilization6_jp/",
       "patterns": [
-        "シヴィライゼーション", "Civilization6", "CIV6", "シビライゼーション"
+        "シヴィライゼーション",
+        "Civilization6",
+        "CIV6",
+        "シビライゼーション"
       ]
     },
     {
@@ -483,7 +633,8 @@
       "category": "game",
       "url": "https://undertale.jp/",
       "patterns": [
-        "UNDERTALE", "アンダーテイル"
+        "UNDERTALE",
+        "アンダーテイル"
       ]
     },
     {
@@ -501,7 +652,8 @@
       "category": "game",
       "url": "https://umdc.shueisha-games.com/",
       "patterns": [
-        "都市伝説解体センター", "都市伝説"
+        "都市伝説解体センター",
+        "都市伝説"
       ]
     },
     {
@@ -510,8 +662,12 @@
       "category": "game",
       "url": "https://www.jp.square-enix.com/so2r/",
       "patterns": [
-        "スターオーシャン２", "スターオーシャン2", "SO2R", "SO2",
-        "スタオー２", "STAR OCEAN THE SECOND STORY R"
+        "スターオーシャン２",
+        "スターオーシャン2",
+        "SO2R",
+        "SO2",
+        "スタオー２",
+        "STAR OCEAN THE SECOND STORY R"
       ]
     },
     {
@@ -520,7 +676,9 @@
       "category": "game",
       "url": "https://www.konami.com/games/castlevania/jp/ja/page/history_2018_x_son_rob",
       "patterns": [
-        "悪魔城ドラキュラ", "悪魔城ドラキュラＸ", "悪魔城ドラキュラX"
+        "悪魔城ドラキュラ",
+        "悪魔城ドラキュラＸ",
+        "悪魔城ドラキュラX"
       ]
     },
     {
@@ -529,8 +687,10 @@
       "category": "game",
       "url": "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB_%E7%A5%9E%E9%BE%8D%E3%81%AE%E8%AC%8E",
       "patterns": [
-        "ドラゴンボール 神龍の謎", "神龍の謎",
-        "シェンロンの謎", "DRAGON BALL 神龍の謎"
+        "ドラゴンボール 神龍の謎",
+        "神龍の謎",
+        "シェンロンの謎",
+        "DRAGON BALL 神龍の謎"
       ]
     },
     {
@@ -548,9 +708,14 @@
       "category": "game",
       "url": "https://www.dragonquest.jp/roto-trilogy/",
       "patterns": [
-        "ドラクエ2", "ドラクエ２", "ドラクエII",
-        "ドラゴンクエスト2", "ドラゴンクエスト２", "ドラゴンクエストII",
-        "DQ2", "悪霊の神々"
+        "ドラクエ2",
+        "ドラクエ２",
+        "ドラクエII",
+        "ドラゴンクエスト2",
+        "ドラゴンクエスト２",
+        "ドラゴンクエストII",
+        "DQ2",
+        "悪霊の神々"
       ]
     },
     {
@@ -559,8 +724,10 @@
       "category": "game",
       "url": "http://www.dragonquest.jp/dqm_terrysp/",
       "patterns": [
-        "ドラゴンクエストモンスターズ", "ドラクエモンスターズ",
-        "テリーのワンダーランド", "DQM"
+        "ドラゴンクエストモンスターズ",
+        "ドラクエモンスターズ",
+        "テリーのワンダーランド",
+        "DQM"
       ]
     },
     {
@@ -569,7 +736,9 @@
       "category": "game",
       "url": "https://www.danganronpa.com/",
       "patterns": [
-        "ダンガンロンパ", "ダンロン", "希望の学園と絶望の高校生"
+        "ダンガンロンパ",
+        "ダンロン",
+        "希望の学園と絶望の高校生"
       ]
     },
     {
@@ -578,7 +747,8 @@
       "category": "game",
       "url": "https://poker-chase.com/",
       "patterns": [
-        "ポーカーチェイス", "ポーカー"
+        "ポーカーチェイス",
+        "ポーカー"
       ]
     },
     {
@@ -586,7 +756,10 @@
       "name": "雑談",
       "category": "chat",
       "patterns": [
-        "雑談", "雑談配信", "雑談コラボ", "コラボ雑談"
+        "雑談",
+        "雑談配信",
+        "雑談コラボ",
+        "コラボ雑談"
       ]
     },
     {
