@@ -196,7 +196,7 @@
     {
       "id": "kinnikuman",
       "name": "キン肉マン",
-      "category": "manga",
+      "category": "other",
       "url": "https://yudetamago.jp/",
       "patterns": [
         "キン肉マン",
@@ -561,7 +561,7 @@
     {
       "id": "negima",
       "name": "魔法先生ネギま！",
-      "category": "manga",
+      "category": "other",
       "url": "https://ja.wikipedia.org/wiki/%E9%AD%94%E6%B3%95%E5%85%88%E7%94%9F%E3%83%8D%E3%82%AE%E3%81%BE!",
       "patterns": [
         "魔法先生ネギま",
@@ -749,6 +749,244 @@
       "patterns": [
         "ポーカーチェイス",
         "ポーカー"
+      ]
+    },
+    {
+      "id": "cursed_companions",
+      "name": "Cursed Companions",
+      "category": "game",
+      "url": "https://cursedcompanions.crimson-forge.com/",
+      "patterns": [
+        "Cursed Companions",
+        "コラボ"
+      ]
+    },
+    {
+      "id": "super_mario_64",
+      "name": "スーパーマリオ64",
+      "category": "game",
+      "url": "https://www.nintendo.com/jp/character/mario/history/64/index.html",
+      "patterns": [
+        "マリオ６４",
+        "マリオ64"
+      ]
+    },
+    {
+      "id": "saigo_no_mura",
+      "name": "最後の村～勇者が失敗した世界で村人は何ができるか～",
+      "category": "game",
+      "url": "https://sorano-concon.com/%E3%80%90%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0%E3%80%91%E6%9C%80%E5%BE%8C%E3%81%AE%E6%9D%91/",
+      "patterns": [
+        "フリーゲーム",
+        "フリゲ",
+        "最後の村",
+        "最後の村～勇者が失敗した世界で村人は何ができるか～",
+        "勇者が失敗した世界で村人は何ができるか"
+      ]
+    },
+    {
+      "id": "power_pro_adventures",
+      "name": "パワプロアドベンチャーズ",
+      "category": "game",
+      "url": "https://www.konami.com/pawa/adventures/",
+      "patterns": [
+        "ソシャゲ",
+        "ソーシャルゲーム",
+        "アプリ",
+        "アプリゲーム",
+        "パワプロ",
+        "パワプロアドベンチャーズ",
+        "パワアド",
+        "パワプロアドベンチャー",
+        "実況パワフルプロ野球"
+      ]
+    },
+    {
+      "id": "oyaoya_oyasan",
+      "name": "おやおや？大家さん！",
+      "category": "game",
+      "url": "https://oyaoya-ooya3.com/",
+      "patterns": [
+        "おやおや大家さん",
+        "おやおや？大家さん",
+        "おやおや？大家さん！",
+        "おやおや?大家さん",
+        "おやおや?大家さん!",
+        "人狼",
+        "人狼系ゲーム"
+      ]
+    },
+    {
+      "id": "riyoukiyaku_ni_douishitai",
+      "name": "利用規約に同意したい",
+      "category": "game",
+      "url": "https://sites.google.com/view/vestman-lab/home/Agreeee",
+      "patterns": [
+        "利用規約",
+        "利用規約に同意したい",
+        "ドキドキアクションゲーム"
+      ]
+    },
+    {
+      "id": "jarebon",
+      "name": "じゃれ本",
+      "category": "game",
+      "url": "https://jarebon.com/",
+      "patterns": [
+        "じゃれ本",
+        "リレー小説",
+        "ブラウザゲーム",
+        "ボードゲーム",
+        "ボドゲ",
+        "リレー",
+        "参加型",
+        "参加型配信",
+        "参加型じゃれ本"
+      ]
+    },
+    {
+      "id": "homunculus_no_niku",
+      "name": "新説 ホムンクルスの肉",
+      "category": "game",
+      "url": "https://www.jugglerhyoga.net/homunculus-meat",
+      "patterns": [
+        "ホラーゲーム",
+        "ホラゲー",
+        "ホラー",
+        "ホムンクルスの肉",
+        "新説ホムンクルスの肉",
+        "新説　ホムンクルスの肉"
+      ]
+    },
+    {
+      "id": "headliner",
+      "name": "ヘッドライナー",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/680980/",
+      "patterns": [
+        "初見プレイ",
+        "初見実況",
+        "ヘッドライナー",
+        "HEADLINER",
+        "ＨＥＡＤＬＩＮＥＲ",
+        "偏向報道"
+      ]
+    },
+    {
+      "id": "jiko_bukken_kanshi",
+      "name": "日本事故物件監視協会 -Japan Stigmatized Property-",
+      "category": "game",
+      "url": "https://jp-stigmatized-property.com/",
+      "patterns": [
+        "ホラーゲーム",
+        "ホラゲー",
+        "ホラー",
+        "事故物件監視協会",
+        "JSP",
+        "JSP 事故物件監視協会",
+        "事故物件監視協会 -JSP-",
+        "事故物件",
+        "日本事故物件監視協会 -Japan Stigmatized Property-",
+        "Japan Stigmatized Property"
+      ]
+    },
+    {
+      "id": "mini_metro",
+      "name": "Mini Metro",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/287980/",
+      "patterns": [
+        "MiniMetro",
+        "minimetro",
+        "Ｍｉｎｉ　Ｍｅｔｒｏ",
+        "ＭｉｎｉＭｅｔｒｏ",
+        "ミニメトロ",
+        "パズルゲーム",
+        "パズル",
+        "地下鉄",
+        "初見プレイ",
+        "初見実況"
+      ]
+    },
+    {
+      "id": "puzzle_castle",
+      "name": "大迷宮パズルキャッスルからの脱出",
+      "category": "game",
+      "url": "https://realdgame.jp/s/puzzle-castle/",
+      "patterns": [
+        "脱出ゲーム",
+        "脱出ゲー",
+        "謎解き",
+        "謎解きゲーム",
+        "SCRAP",
+        "スクラップ",
+        "大迷宮パズルキャッスルからの脱出",
+        "パズルキャッスルからの脱出",
+        "コラボ"
+      ]
+    },
+    {
+      "id": "kyoufu_taisei_shindan",
+      "name": "恐怖耐性診断テスト",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/3906770/",
+      "patterns": [
+        "恐怖耐性診断テスト"
+      ]
+    },
+    {
+      "id": "papers_please",
+      "name": "PAPERS, PLEASE",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/239030/",
+      "patterns": [
+        "PAPERS PLEASE",
+        "Papers Please",
+        "PAPERS",
+        "PLEASE",
+        "ペーパーズプリーズ",
+        "間違い探し"
+      ]
+    },
+    {
+      "id": "kouun_no_oyasama",
+      "name": "幸運の大家様",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/1404850/",
+      "patterns": [
+        "幸運の大家様",
+        "ギャンブル",
+        "スロット",
+        "ローグライク"
+      ]
+    },
+    {
+      "id": "kagamino2",
+      "name": "かがみの特殊少年更生施設 少年の声、彼女のうた",
+      "category": "game",
+      "url": "https://www.daiyonkyokai.net/case-mark/012/",
+      "patterns": [
+        "謎解き",
+        "謎解きゲーム",
+        "ブラウザゲー",
+        "ブラウザゲーム",
+        "モキュメンタリー",
+        "少年の声　少女のうた",
+        "少年の声　少女の歌",
+        "少年の声少女のうた",
+        "かがみの特殊少年更生施設少年の声少女のうた",
+        "かがみの特殊少年更生施設　少年の声　少女のうた",
+        "かがみの特殊少年更生施設"
+      ]
+    },
+    {
+      "id": "watchalong",
+      "name": "同時視聴",
+      "category": "other",
+      "url": "",
+      "patterns": [
+        "同時視聴",
+        "オンライン上映会"
       ]
     },
     {
