@@ -359,6 +359,72 @@ function setGithubOutput(name, value) {
 }
 
 // ============================
+// 重複Issue確認
+// ============================
+
+async function existsOpenIssueToday(
+  today
+) {
+  const token =
+    process.env.GITHUB_TOKEN;
+
+  const repo =
+    process.env.GITHUB_REPOSITORY;
+
+  if (!token || !repo) {
+    return false;
+  }
+
+  const title =
+    `未分類動画検出レポート（${today}）`;
+
+  const url =
+    `https://api.github.com/repos/${repo}/issues` +
+    `?state=open&per_page=10`;
+
+  try {
+    const response =
+      await fetch(
+        url,
+        {
+          headers: {
+            'Authorization':
+              `Bearer ${token}`,
+
+            'Accept':
+              'application/vnd.github+json'
+          }
+        }
+      );
+
+    if (!response.ok) {
+      console.warn(
+        `Issue一覧取得失敗: HTTP ${response.status}` +
+        `、重複チェックをスキップします。`
+      );
+
+      return false;
+    }
+
+    const issues =
+      await response.json();
+
+    return issues.some(
+      issue =>
+        issue.title === title
+    );
+
+  } catch (error) {
+    console.warn(
+      `Issue一覧取得エラー: ${error.message}` +
+      `、重複チェックをスキップします。`
+    );
+
+    return false;
+  }
+}
+
+// ============================
 // main
 // ============================
 
@@ -439,23 +505,62 @@ async function main() {
   console.log(`未分類動画件数: ${unclassifiedVideos.length}`);
 
   if (unclassifiedVideos.length > 0) {
-    const groups = groupUnclassifiedVideos(unclassifiedVideos);
 
-    const periodStartLabel = lastCheckedAt || '(初回)';
+    // 重複チェック
+    const alreadyReported =
+      await existsOpenIssueToday(
+        today
+      );
 
-    const body = buildIssueBody(
-      groups,
-      periodStartLabel,
-      today,
-      unclassifiedVideos.length
-    );
+    if (alreadyReported) {
+      console.log(
+        `本日分のIssueが既に存在するため、Issue作成をスキップします。`
+      );
 
-    await fs.writeFile(ISSUE_BODY_PATH, body, 'utf8');
+      setGithubOutput(
+        'has_unclassified',
+        'false'
+      );
 
-    setGithubOutput('has_unclassified', 'true');
-    setGithubOutput('issue_title', `未分類動画検出レポート（${today}）`);
+    } else {
+      const groups =
+        groupUnclassifiedVideos(
+          unclassifiedVideos
+        );
+
+      const periodStartLabel =
+        lastCheckedAt || '(初回)';
+
+      const body =
+        buildIssueBody(
+          groups,
+          periodStartLabel,
+          today,
+          unclassifiedVideos.length
+        );
+
+      await fs.writeFile(
+        ISSUE_BODY_PATH,
+        body,
+        'utf8'
+      );
+
+      setGithubOutput(
+        'has_unclassified',
+        'true'
+      );
+
+      setGithubOutput(
+        'issue_title',
+        `未分類動画検出レポート（${today}）`
+      );
+    }
+
   } else {
-    setGithubOutput('has_unclassified', 'false');
+    setGithubOutput(
+      'has_unclassified',
+      'false'
+    );
   }
 
   // lastCheckedAt のみ更新（version・patterns等は一切変更しない）
