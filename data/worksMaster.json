@@ -1,5 +1,5 @@
 {
-  "lastCheckedAt": "20260705",
+  "lastCheckedAt": "20260706",
   "description": "軽量ルールベース分類エンジン。作品判定ルールは searchOrder, defaultMatch に従う。matchingStrategy は、常にfirst_match（先頭から順に一致したものを採用）",
   "defaultMatch": {
     "mode": "partial",
@@ -951,14 +951,14 @@
       ]
     },
     {
-    "id": "interaction",
-    "name": "リスナー参加型",
-    "category": "other",
-    "url": "",
-    "patterns": [
-      "参加型",
-      "リスナー参加型",
-      "視聴者参加型"
+      "id": "interaction",
+      "name": "リスナー参加型",
+      "category": "other",
+      "url": "",
+      "patterns": [
+        "参加型",
+        "リスナー参加型",
+        "視聴者参加型"
       ]
     },
     {
