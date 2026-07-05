@@ -264,13 +264,19 @@
     },
     {
       "id": "slay_the_spire",
-      "name": "Slay the Spire",
+      "name": "Slay the Spire & Slay the Spire II",
       "category": "game",
       "url": "https://www.megacrit.com/",
       "patterns": [
         "slay the spire",
         "Slay the Spire",
-        "スレスパ"
+        "slay the spire2",
+        "Slay the Spire2",
+        "SlayTheSpire2",
+        "SlayTheSpire",
+        "スレスパ",
+        "スレスパ2",
+        "スレスパ２"
       ]
     },
     {
@@ -281,7 +287,7 @@
       "patterns": [
         "タイムストレンジャー",
         "タイスト",
-        "デジモンストーリータイムストレンジャー"
+        "デジモンストーリー タイムストレンジャー"
       ]
     },
     {
@@ -293,8 +299,6 @@
         "雀魂",
         "ジャンタマ",
         "じゃんたま",
-        "麻雀",
-        "マージャン",
         "参加型雀魂"
       ]
     },
@@ -334,8 +338,7 @@
       "url": "https://gakuen.idolmaster-official.jp/",
       "patterns": [
         "学園アイドルマスター",
-        "学マス",
-        "IDOL M@STER"
+        "学マス"
       ]
     },
     {
@@ -373,9 +376,7 @@
         "ダークソウル",
         "ダクソ",
         "DARK SOUL",
-        "ダークソウルリマスター",
-        "フロムゲー",
-        "フロムソフトウェア"
+        "ダークソウルリマスター"
       ]
     },
     {
@@ -416,8 +417,7 @@
       "patterns": [
         "魔法少女ノ魔女裁判",
         "まのさば",
-        "魔法少女の魔女裁判",
-        "魔女裁判"
+        "魔法少女の魔女裁判"
       ]
     },
     {
@@ -470,10 +470,8 @@
       "category": "game",
       "url": "https://ryu-ga-gotoku.com/kiwami/",
       "patterns": [
-        "龍が如く",
         "龍が如く 極",
-        "龍が如く極",
-        "桐生一馬"
+        "龍が如く極"
       ]
     },
     {
@@ -550,7 +548,6 @@
       "category": "game",
       "url": "https://www.nintendo.com/jp/switch/av5ja/",
       "patterns": [
-        "スプラトゥーン",
         "スプラトゥーン３",
         "スプラトゥーン3",
         "Splatoon3"
@@ -574,11 +571,9 @@
       "category": "game",
       "url": "https://www.d3p.co.jp/edf5/",
       "patterns": [
-        "地球防衛軍",
         "地球防衛軍5",
         "地球防衛軍５",
-        "EARTH DEFENSE FORCES5",
-        "EARTH DEFENSE FORCES"
+        "EARTH DEFENSE FORCES5"
       ]
     },
     {
@@ -644,9 +639,9 @@
       "category": "game",
       "url": "https://2kgames.jp/civilization6_jp/",
       "patterns": [
-        "シヴィライゼーション",
         "Civilization6",
         "CIV6",
+        "シヴィライゼーション",
         "シビライゼーション"
       ]
     },
@@ -699,9 +694,9 @@
       "category": "game",
       "url": "https://www.konami.com/games/castlevania/jp/ja/page/history_2018_x_son_rob",
       "patterns": [
-        "悪魔城ドラキュラ",
         "悪魔城ドラキュラＸ",
-        "悪魔城ドラキュラX"
+        "悪魔城ドラキュラX",
+        "悪魔城ドラキュラ"
       ]
     },
     {
@@ -722,7 +717,9 @@
       "category": "game",
       "url": "https://garticphone.com/",
       "patterns": [
-        "ガーティックフォン"
+        "ガーティックフォン",
+        "Gartic Phone",
+        "GarticPhone"
       ]
     },
     {
@@ -770,8 +767,7 @@
       "category": "game",
       "url": "https://poker-chase.com/",
       "patterns": [
-        "ポーカーチェイス",
-        "ポーカー"
+        "ポーカーチェイス"
       ]
     },
     {
@@ -780,8 +776,7 @@
       "category": "game",
       "url": "https://cursedcompanions.crimson-forge.com/",
       "patterns": [
-        "Cursed Companions",
-        "コラボ"
+        "Cursed Companions"
       ]
     },
     {
@@ -800,8 +795,6 @@
       "category": "game",
       "url": "https://sorano-concon.com/%E3%80%90%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0%E3%80%91%E6%9C%80%E5%BE%8C%E3%81%AE%E6%9D%91/",
       "patterns": [
-        "フリーゲーム",
-        "フリゲ",
         "最後の村",
         "最後の村～勇者が失敗した世界で村人は何ができるか～",
         "勇者が失敗した世界で村人は何ができるか"
@@ -828,9 +821,7 @@
         "おやおや？大家さん",
         "おやおや？大家さん！",
         "おやおや?大家さん",
-        "おやおや?大家さん!",
-        "人狼",
-        "人狼系ゲーム"
+        "おやおや?大家さん!"
       ]
     },
     {
@@ -839,7 +830,6 @@
       "category": "game",
       "url": "https://sites.google.com/view/vestman-lab/home/Agreeee",
       "patterns": [
-        "利用規約",
         "利用規約に同意したい",
         "ドキドキアクションゲーム"
       ]
@@ -852,12 +842,6 @@
       "patterns": [
         "じゃれ本",
         "リレー小説",
-        "ブラウザゲーム",
-        "ボードゲーム",
-        "ボドゲ",
-        "リレー",
-        "参加型",
-        "参加型配信",
         "参加型じゃれ本"
       ]
     },
@@ -867,9 +851,6 @@
       "category": "game",
       "url": "https://www.jugglerhyoga.net/homunculus-meat",
       "patterns": [
-        "ホラーゲーム",
-        "ホラゲー",
-        "ホラー",
         "ホムンクルスの肉",
         "新説ホムンクルスの肉",
         "新説　ホムンクルスの肉"
@@ -881,8 +862,6 @@
       "category": "game",
       "url": "https://store.steampowered.com/app/680980/",
       "patterns": [
-        "初見プレイ",
-        "初見実況",
         "ヘッドライナー",
         "HEADLINER",
         "ＨＥＡＤＬＩＮＥＲ",
@@ -895,9 +874,6 @@
       "category": "game",
       "url": "https://jp-stigmatized-property.com/",
       "patterns": [
-        "ホラーゲーム",
-        "ホラゲー",
-        "ホラー",
         "事故物件監視協会",
         "JSP",
         "JSP 事故物件監視協会",
@@ -918,11 +894,7 @@
         "Ｍｉｎｉ　Ｍｅｔｒｏ",
         "ＭｉｎｉＭｅｔｒｏ",
         "ミニメトロ",
-        "パズルゲーム",
-        "パズル",
-        "地下鉄",
-        "初見プレイ",
-        "初見実況"
+        "地下鉄"
       ]
     },
     {
@@ -931,15 +903,8 @@
       "category": "game",
       "url": "https://realdgame.jp/s/puzzle-castle/",
       "patterns": [
-        "脱出ゲーム",
-        "脱出ゲー",
-        "謎解き",
-        "謎解きゲーム",
-        "SCRAP",
-        "スクラップ",
         "大迷宮パズルキャッスルからの脱出",
-        "パズルキャッスルからの脱出",
-        "コラボ"
+        "パズルキャッスルからの脱出"
       ]
     },
     {
@@ -959,10 +924,7 @@
       "patterns": [
         "PAPERS PLEASE",
         "Papers Please",
-        "PAPERS",
-        "PLEASE",
-        "ペーパーズプリーズ",
-        "間違い探し"
+        "ペーパーズプリーズ"
       ]
     },
     {
@@ -971,10 +933,7 @@
       "category": "game",
       "url": "https://store.steampowered.com/app/1404850/",
       "patterns": [
-        "幸運の大家様",
-        "ギャンブル",
-        "スロット",
-        "ローグライク"
+        "幸運の大家様"
       ]
     },
     {
@@ -983,17 +942,23 @@
       "category": "game",
       "url": "https://www.daiyonkyokai.net/case-mark/012/",
       "patterns": [
-        "謎解き",
-        "謎解きゲーム",
-        "ブラウザゲー",
-        "ブラウザゲーム",
-        "モキュメンタリー",
         "少年の声　少女のうた",
         "少年の声　少女の歌",
         "少年の声少女のうた",
         "かがみの特殊少年更生施設少年の声少女のうた",
         "かがみの特殊少年更生施設　少年の声　少女のうた",
         "かがみの特殊少年更生施設"
+      ]
+    },
+    {
+    "id": "interaction",
+    "name": "リスナー参加型",
+    "category": "other",
+    "url": "",
+    "patterns": [
+      "参加型",
+      "リスナー参加型",
+      "視聴者参加型"
       ]
     },
     {
@@ -1010,6 +975,7 @@
       "id": "chat",
       "name": "雑談",
       "category": "chat",
+      "url": "",
       "patterns": [
         "雑談",
         "雑談配信",
