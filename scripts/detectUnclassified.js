@@ -292,7 +292,6 @@ function groupUnclassifiedVideos(unclassifiedVideos) {
 
 function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
   const lines = [];
-  const shownVideoIds = new Set();
 
   lines.push(`## 未分類動画検出レポート（${periodEndLabel}）`);
   lines.push('');
@@ -302,40 +301,14 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
   lines.push('---');
 
   for (const group of groups) {
-
-    const primaryVideos =
-      group.videos.filter(
-        v => !shownVideoIds.has(v.videoId)
-      );
-
-    const secondaryCount =
-      group.videos.length -
-      primaryVideos.length;
-
     lines.push('');
     lines.push(`### 候補グループ: "${group.candidate}"`);
     lines.push('');
+    lines.push(`該当動画 (${group.videos.length}件):`);
 
-    if (primaryVideos.length === 0) {
-      lines.push(
-        `該当動画 (0件 / 全${group.videos.length}件は他グループに掲載済み)`
-      );
-
-    } else {
-      const suffix =
-        secondaryCount > 0
-          ? ` ※他${secondaryCount}件は他グループに掲載済み`
-          : '';
-
-      lines.push(
-        `該当動画 (${primaryVideos.length}件${suffix}):`
-      );
-
-      for (const video of primaryVideos) {
-        shownVideoIds.add(video.videoId);
-        lines.push(`- ${video.title}`);
-        lines.push(`  ${getYouTubeVideoUrl(video.videoId)}`);
-      }
+    for (const video of group.videos) {
+      lines.push(`- ${video.title}`);
+      lines.push(`  ${getYouTubeVideoUrl(video.videoId)}`);
     }
 
     lines.push('');
