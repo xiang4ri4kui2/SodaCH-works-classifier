@@ -300,6 +300,58 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
   lines.push('');
   lines.push('---');
 
+  // ============================
+  // 動画サマリー（重複なし）
+  // ============================
+
+  const seenInSummary = new Set();
+  const candidateCache = new Map();
+  const summaryVideos = [];
+
+  for (const group of groups) {
+    for (const video of group.videos) {
+      if (!seenInSummary.has(video.videoId)) {
+        seenInSummary.add(video.videoId);
+        summaryVideos.push(video);
+      }
+
+      if (!candidateCache.has(video.videoId)) {
+        candidateCache.set(
+          video.videoId,
+          buildCandidates(video)
+        );
+      }
+    }
+  }
+
+  lines.push('');
+  lines.push('## 📋 未分類動画サマリー');
+  lines.push('');
+
+  for (const video of summaryVideos) {
+    const candidates =
+      candidateCache.get(video.videoId) || [];
+
+    lines.push(`- ${video.title}`);
+    lines.push(`  ${getYouTubeVideoUrl(video.videoId)}`);
+
+    if (candidates.length > 0) {
+      lines.push(
+        `  patterns候補 (${candidates.length}件): ${candidates.join(' / ')}`
+      );
+    }
+
+    lines.push('');
+  }
+
+  // ============================
+  // 候補グループ詳細
+  // ============================
+
+  lines.push('---');
+  lines.push('');
+  lines.push('## 候補グループ詳細');
+
   for (const group of groups) {
     lines.push('');
     lines.push(`### 候補グループ: "${group.candidate}"`);
@@ -318,7 +370,9 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
 
     const allCandidatesForGroup = [
       ...new Set(
-        group.videos.flatMap(v => buildCandidates(v))
+        group.videos.flatMap(
+          v => candidateCache.get(v.videoId) || []
+        )
       )
     ];
 
