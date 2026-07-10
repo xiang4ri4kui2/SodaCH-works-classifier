@@ -4,9 +4,10 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "scripts": {
     "detect": "node scripts/detectUnclassified.js"
-  }
+  },
+  "dependencies": {}
 }
