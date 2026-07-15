@@ -952,9 +952,9 @@
     },
     {
       "id": "monster_farm",
-      "name": "モンスターファーム",
-      "category": "https://www.gamecity.ne.jp/mfdx/",
-      "url": "モンスターファーム1＆2 DX",
+      "name": "モンスターファーム1＆2 DX",
+      "category": "game",
+      "url": "https://www.gamecity.ne.jp/mfdx/",
       "patterns": [
         "モンスターファーム",
         "モンスターファーム１",
