@@ -951,6 +951,22 @@
       ]
     },
     {
+      "id": "monster_farm",
+      "name": "モンスターファーム",
+      "category": "https://www.gamecity.ne.jp/mfdx/",
+      "url": "モンスターファーム1＆2 DX",
+      "patterns": [
+        "モンスターファーム",
+        "モンスターファーム１",
+        "モンスターファーム1&2DX",
+        "モンスターファーム1&2",
+        "モンスターファーム１＆２",
+        "モンスターファーム１＆２ＤＸ",
+        "モンスターファーム1&2 DX",
+        "Monster Farm"
+      ]
+    },
+    {
       "id": "interaction",
       "name": "リスナー参加型",
       "category": "other",
