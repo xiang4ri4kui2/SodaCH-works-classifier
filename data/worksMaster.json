@@ -1,5 +1,5 @@
 {
-  "lastCheckedAt": "20260722",
+  "lastCheckedAt": "20260723",
   "description": "軽量ルールベース分類エンジン。作品判定ルールは searchOrder, defaultMatch に従う。matchingStrategy は、常にfirst_match（先頭から順に一致したものを採用）",
   "defaultMatch": {
     "mode": "partial",
