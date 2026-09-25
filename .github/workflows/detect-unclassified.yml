@@ -1,7 +1,7 @@
 name: Detect Unclassified Videos
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,10 +20,16 @@ jobs:
         with:
           node-version: 24
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run detection script
         id: detect
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          UNCLASSIFIED_EMAIL_TO: ${{ secrets.UNCLASSIFIED_EMAIL_TO }}
         run: node scripts/detectUnclassified.js
 
       - name: Create Issue if unclassified videos found
