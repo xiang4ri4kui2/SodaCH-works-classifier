@@ -1,17 +1,14 @@
 import fs from 'node:fs/promises';
 import fsSync from 'node:fs';
+import nodemailer from 'nodemailer';
 
-const CHANNELS_PATH =
-  'data/channels.json';
+const CHANNELS_PATH = 'data/channels.json';
 
-const WORKS_MASTER_PATH =
-  'data/worksMaster.json';
+const WORKS_MASTER_PATH = 'data/worksMaster.json';
 
-const ISSUE_BODY_PATH =
-  'issue-body.md';
+const ISSUE_BODY_PATH = 'issue-body.md';
 
-const YOUTUBE_API_BASE =
-  'https://www.googleapis.com/youtube/v3';
+const YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3';
 
 async function readJson(path, fallback) {
   try {
@@ -23,11 +20,7 @@ async function readJson(path, fallback) {
 }
 
 async function writeJson(path, data) {
-  await fs.writeFile(
-    path,
-    JSON.stringify(data, null, 2) + '\n',
-    'utf8'
-  );
+  await fs.writeFile(path, JSON.stringify(data, null, 2) + '\n', 'utf8');
 }
 
 // ============================
@@ -39,11 +32,11 @@ function todayYYYYMMDD_JST() {
     timeZone: 'Asia/Tokyo',
     year: 'numeric',
     month: '2-digit',
-    day: '2-digit'
+    day: '2-digit',
   });
 
   const parts = formatter.formatToParts(new Date());
-  const get = type => parts.find(p => p.type === type)?.value;
+  const get = (type) => parts.find((p) => p.type === type)?.value;
 
   return `${get('year')}${get('month')}${get('day')}`;
 }
@@ -64,8 +57,8 @@ function yyyymmddToUtcIso(yyyymmdd) {
       Number(mo) - 1,
       Number(d),
       -9, // JST 0:00 = UTC前日15:00
-      0
-    )
+      0,
+    ),
   );
 
   return utcDate.toISOString();
@@ -87,12 +80,14 @@ async function getUploadsPlaylistId(channelId, apiKey) {
 
   if (!response.ok) {
     throw new Error(
-      `channels APIエラー: HTTP ${response.status} ${JSON.stringify(data)}`
+      `channels APIエラー: HTTP ${response.status} ${JSON.stringify(data)}`,
     );
   }
 
   if (!data.items || data.items.length === 0) {
-    throw new Error('チャンネルが見つかりません。channelIdを確認してください。');
+    throw new Error(
+      'チャンネルが見つかりません。channelIdを確認してください。',
+    );
   }
 
   return data.items[0].contentDetails.relatedPlaylists.uploads;
@@ -122,7 +117,7 @@ async function getPlaylistVideosSince(playlistId, apiKey, sinceIso) {
 
     if (!response.ok) {
       throw new Error(
-        `playlistItems APIエラー: HTTP ${response.status} ${JSON.stringify(data)}`
+        `playlistItems APIエラー: HTTP ${response.status} ${JSON.stringify(data)}`,
       );
     }
 
@@ -142,7 +137,7 @@ async function getPlaylistVideosSince(playlistId, apiKey, sinceIso) {
       videos.push({ videoId, publishedAt });
     }
 
-    pageToken = reachedOld ? '' : (data.nextPageToken || '');
+    pageToken = reachedOld ? '' : data.nextPageToken || '';
   } while (pageToken);
 
   return videos;
@@ -168,7 +163,7 @@ async function getVideoDetails(videoIds, apiKey) {
 
     if (!response.ok) {
       throw new Error(
-        `videos APIエラー: HTTP ${response.status} ${JSON.stringify(data)}`
+        `videos APIエラー: HTTP ${response.status} ${JSON.stringify(data)}`,
       );
     }
 
@@ -176,7 +171,7 @@ async function getVideoDetails(videoIds, apiKey) {
       result[item.id] = {
         title: item.snippet?.title || '',
         description: item.snippet?.description || '',
-        tags: item.snippet?.tags || []
+        tags: item.snippet?.tags || [],
       };
     }
   }
@@ -194,13 +189,9 @@ function extractBracketStrings(title) {
     return [];
   }
 
-  const matches = [
-    ...title.matchAll(/[【(（]([^】)）]+)[】)）]/g)
-  ];
+  const matches = [...title.matchAll(/[【(（]([^】)）]+)[】)）]/g)];
 
-  return matches
-    .map(m => m[1].trim())
-    .filter(s => s.length >= 2);
+  return matches.map((m) => m[1].trim()).filter((s) => s.length >= 2);
 }
 
 // 動画1件分の候補文字列（tags + title括弧内）を重複排除して返す
@@ -209,8 +200,8 @@ function buildCandidates(video) {
   const fromTitle = extractBracketStrings(video.title);
 
   const merged = [...fromTags, ...fromTitle]
-    .map(s => s.trim())
-    .filter(s => s.length >= 2);
+    .map((s) => s.trim())
+    .filter((s) => s.length >= 2);
 
   return [...new Set(merged)];
 }
@@ -219,16 +210,11 @@ function buildCandidates(video) {
 // title または tags 中に部分一致するか（= 分類済みか）
 function isAlreadyClassified(video, worksMaster) {
   const works = worksMaster?.works || [];
-  const caseSensitive =
-    worksMaster?.defaultMatch?.caseSensitive ?? false;
+  const caseSensitive = worksMaster?.defaultMatch?.caseSensitive ?? false;
 
-  const haystack = (
-    (video.title || '') + ' ' + (video.tags || []).join(' ')
-  );
+  const haystack = (video.title || '') + ' ' + (video.tags || []).join(' ');
 
-  const searchHaystack = caseSensitive
-    ? haystack
-    : haystack.toLowerCase();
+  const searchHaystack = caseSensitive ? haystack : haystack.toLowerCase();
 
   for (const work of works) {
     if (!work.patterns) {
@@ -236,9 +222,7 @@ function isAlreadyClassified(video, worksMaster) {
     }
 
     for (const pattern of work.patterns) {
-      const searchPattern = caseSensitive
-        ? pattern
-        : pattern.toLowerCase();
+      const searchPattern = caseSensitive ? pattern : pattern.toLowerCase();
 
       if (searchHaystack.includes(searchPattern)) {
         return true;
@@ -251,6 +235,55 @@ function isAlreadyClassified(video, worksMaster) {
 
 function getYouTubeVideoUrl(videoId) {
   return 'https://www.youtube.com/watch?v=' + videoId;
+}
+
+// ============================
+// 未分類動画メール通知
+// ============================
+
+async function sendUnclassifiedEmail(video) {
+  const to = process.env.UNCLASSIFIED_EMAIL_TO;
+  const gmailUser = process.env.GMAIL_USERNAME;
+  const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
+
+  if (!to || !gmailUser || !gmailAppPassword) {
+    console.warn(
+      'メール通知用の環境変数が未設定のため、メール送信をスキップします。',
+    );
+    return;
+  }
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: gmailUser,
+      pass: gmailAppPassword,
+    },
+  });
+
+  const title = video.title || '(untitled)';
+
+  const tags =
+    Array.isArray(video.tags) && video.tags.length > 0
+      ? video.tags.join(' / ')
+      : '(none)';
+
+  const videoUrl = getYouTubeVideoUrl(video.videoId);
+
+  const subject = `Unclassified: ${title}`;
+
+  const text = [`Title: ${title}`, `Tags: ${tags}`, `URL: ${videoUrl}`].join(
+    '\n',
+  );
+
+  await transporter.sendMail({
+    from: gmailUser,
+    to,
+    subject,
+    text,
+  });
+
+  console.log(`Unclassified notification email sent: ${title}`);
 }
 
 // 未分類動画を「候補文字列」単位でグルーピングする
@@ -316,10 +349,7 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
       }
 
       if (!candidateCache.has(video.videoId)) {
-        candidateCache.set(
-          video.videoId,
-          buildCandidates(video)
-        );
+        candidateCache.set(video.videoId, buildCandidates(video));
       }
     }
   }
@@ -329,15 +359,14 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
   lines.push('');
 
   for (const video of summaryVideos) {
-    const candidates =
-      candidateCache.get(video.videoId) || [];
+    const candidates = candidateCache.get(video.videoId) || [];
 
     lines.push(`- ${video.title}`);
     lines.push(`  ${getYouTubeVideoUrl(video.videoId)}`);
 
     if (candidates.length > 0) {
       lines.push(
-        `  patterns候補 (${candidates.length}件): ${candidates.join(' / ')}`
+        `  patterns候補 (${candidates.length}件): ${candidates.join(' / ')}`,
       );
     }
 
@@ -364,16 +393,16 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
     }
 
     lines.push('');
-    lines.push('worksMaster.json への追記用JSON（id/name/category/urlは要確認・修正）:');
+    lines.push(
+      'worksMaster.json への追記用JSON（id/name/category/urlは要確認・修正）:',
+    );
     lines.push('');
     lines.push('```json');
 
     const allCandidatesForGroup = [
       ...new Set(
-        group.videos.flatMap(
-          v => candidateCache.get(v.videoId) || []
-        )
-      )
+        group.videos.flatMap((v) => candidateCache.get(v.videoId) || []),
+      ),
     ];
 
     lines.push(
@@ -383,11 +412,11 @@ function buildIssueBody(groups, periodStartLabel, periodEndLabel, totalCount) {
           name: group.candidate,
           category: 'TODO',
           url: 'TODO',
-          patterns: allCandidatesForGroup
+          patterns: allCandidatesForGroup,
         },
         null,
-        2
-      )
+        2,
+      ),
     );
 
     lines.push('```');
@@ -416,62 +445,45 @@ function setGithubOutput(name, value) {
 // 重複Issue確認
 // ============================
 
-async function existsOpenIssueToday(
-  today
-) {
-  const token =
-    process.env.GITHUB_TOKEN;
+async function existsOpenIssueToday(today) {
+  const token = process.env.GITHUB_TOKEN;
 
-  const repo =
-    process.env.GITHUB_REPOSITORY;
+  const repo = process.env.GITHUB_REPOSITORY;
 
   if (!token || !repo) {
     return false;
   }
 
-  const title =
-    `未分類動画検出レポート（${today}）`;
+  const title = `未分類動画検出レポート（${today}）`;
 
   const url =
-    `https://api.github.com/repos/${repo}/issues` +
-    `?state=open&per_page=10`;
+    `https://api.github.com/repos/${repo}/issues` + `?state=open&per_page=10`;
 
   try {
-    const response =
-      await fetch(
-        url,
-        {
-          headers: {
-            'Authorization':
-              `Bearer ${token}`,
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
 
-            'Accept':
-              'application/vnd.github+json'
-          }
-        }
-      );
+        Accept: 'application/vnd.github+json',
+      },
+    });
 
     if (!response.ok) {
       console.warn(
         `Issue一覧取得失敗: HTTP ${response.status}` +
-        `、重複チェックをスキップします。`
+          `、重複チェックをスキップします。`,
       );
 
       return false;
     }
 
-    const issues =
-      await response.json();
+    const issues = await response.json();
 
-    return issues.some(
-      issue =>
-        issue.title === title
-    );
-
+    return issues.some((issue) => issue.title === title);
   } catch (error) {
     console.warn(
       `Issue一覧取得エラー: ${error.message}` +
-      `、重複チェックをスキップします。`
+        `、重複チェックをスキップします。`,
     );
 
     return false;
@@ -528,7 +540,7 @@ async function main() {
   const baseVideos = await getPlaylistVideosSince(
     uploadsPlaylistId,
     apiKey,
-    sinceIso
+    sinceIso,
   );
 
   console.log(`差分動画件数: ${baseVideos.length}`);
@@ -537,84 +549,71 @@ async function main() {
 
   if (baseVideos.length > 0) {
     const details = await getVideoDetails(
-      baseVideos.map(v => v.videoId),
-      apiKey
+      baseVideos.map((v) => v.videoId),
+      apiKey,
     );
 
     const enriched = baseVideos
-      .map(v => ({
+      .map((v) => ({
         videoId: v.videoId,
         publishedAt: v.publishedAt,
         title: details[v.videoId]?.title || '',
         description: details[v.videoId]?.description || '',
-        tags: details[v.videoId]?.tags || []
+        tags: details[v.videoId]?.tags || [],
       }))
-      .filter(v => v.title); // 削除済み等で詳細取得できなかったものは除外
+      .filter((v) => v.title); // 削除済み等で詳細取得できなかったものは除外
 
     unclassifiedVideos = enriched.filter(
-      v => !isAlreadyClassified(v, worksMaster)
+      (v) => !isAlreadyClassified(v, worksMaster),
     );
   }
 
   console.log(`未分類動画件数: ${unclassifiedVideos.length}`);
 
   if (unclassifiedVideos.length > 0) {
+    // ============================
+    // メール通知
+    // ============================
+
+    for (const video of unclassifiedVideos) {
+      try {
+        await sendUnclassifiedEmail(video);
+      } catch (error) {
+        console.error(`未分類動画メール送信失敗: ${video.title}`, error);
+      }
+    }
 
     // 重複チェック
-    const alreadyReported =
-      await existsOpenIssueToday(
-        today
-      );
+
+    // 重複チェック
+    const alreadyReported = await existsOpenIssueToday(today);
 
     if (alreadyReported) {
       console.log(
-        `本日分のIssueが既に存在するため、Issue作成をスキップします。`
+        `本日分のIssueが既に存在するため、Issue作成をスキップします。`,
       );
 
-      setGithubOutput(
-        'has_unclassified',
-        'false'
-      );
-
+      setGithubOutput('has_unclassified', 'false');
     } else {
-      const groups =
-        groupUnclassifiedVideos(
-          unclassifiedVideos
-        );
+      const groups = groupUnclassifiedVideos(unclassifiedVideos);
 
-      const periodStartLabel =
-        lastCheckedAt || '(初回)';
+      const periodStartLabel = lastCheckedAt || '(初回)';
 
-      const body =
-        buildIssueBody(
-          groups,
-          periodStartLabel,
-          today,
-          unclassifiedVideos.length
-        );
-
-      await fs.writeFile(
-        ISSUE_BODY_PATH,
-        body,
-        'utf8'
+      const body = buildIssueBody(
+        groups,
+        periodStartLabel,
+        today,
+        unclassifiedVideos.length,
       );
 
-      setGithubOutput(
-        'has_unclassified',
-        'true'
-      );
+      await fs.writeFile(ISSUE_BODY_PATH, body, 'utf8');
 
-      setGithubOutput(
-        'issue_title',
-        `未分類動画検出レポート（${today}）`
-      );
+      setGithubOutput('has_unclassified', 'true');
+
+      setGithubOutput('issue_title', `未分類動画検出レポート（${today}）`);
     }
-
   } else {
-    setGithubOutput(
-      'has_unclassified',
-      'false'
-    );
+    setGithubOutput('has_unclassified', 'false');
   }
 
   // lastCheckedAt のみ更新（version・patterns等は一切変更しない）
@@ -625,7 +624,7 @@ async function main() {
   console.log('worksMaster.json の lastCheckedAt を更新しました。');
 }
 
-main().catch(error => {
+main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
