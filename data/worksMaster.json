@@ -7,10 +7,9 @@
   },
   "searchOrder": [
     "tags",
-    "title",
-    "description"
+    "title"
   ],
-  "searchOrderNote": "descriptionは将来的に対応の可能性あり。2026/06/30時点ではtags > titleの対応のみ。",
+  "searchOrderNote": "descriptionにも将来的に対応の可能性あり。2026/06/30時点ではtags > titleの対応のみ。",
   "works": [
     {
       "id": "umamusume",
@@ -964,6 +963,87 @@
         "モンスターファーム１＆２ＤＸ",
         "モンスターファーム1&2 DX",
         "Monster Farm"
+      ]
+    },
+    {
+      "id": "tenipuri_saikyou_team",
+      "name": "テニスの王子様 最強チームを結成せよ！",
+      "category": "game",
+      "url": "",
+      "patterns": [
+        "テニスの王子様 最強チームを結成せよ！",
+        "テニスの王子様 最強チームを結成せよ",
+        "テニスの王子様　最強チームを結成せよ！",
+        "テニスの王子様　最強チームを結成せよ",
+        "最強チームを結成せよ！",
+        "最強チームを結成せよ"
+      ]
+    },
+    {
+      "id": "cloud_dwellers",
+      "name": "雲ぐらしの民",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/2134390/CLOUD_DWELLERS/",
+      "patterns": [
+        "CLOUD DWELLERS",
+        "cloud dwellers",
+        "雲ぐらしの民"
+      ]
+    },
+    {
+      "id": "shawarma_no_densetsu",
+      "name": "シャワルマの伝説",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/3036080/__Shawarma_Legend/",
+      "patterns": [
+        "シャワルマの伝説"
+      ]
+    },
+    {
+      "id": "death_game_no_houkokusho",
+      "name": "デスゲームの報告書",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/5044770/",
+      "patterns": [
+        "デスゲームの報告書"
+      ]
+    },
+    {
+      "id": "ib",
+      "name": "Ib",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/1901370/Ib/",
+      "patterns": [
+        "【Ib】",
+        "イヴ",
+        "イブ",
+        "Ib"
+      ]
+    },
+    {
+      "id": "gensou_shoujo_taisen",
+      "name": "幻想少女大戦 - DREAM OF THE STRAY DREAMER -",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/3575980/__DREAM_OF_THE_STRAY_DREAMER/",
+      "patterns": [
+        "幻想少女大戦",
+        "東方Project",
+        "東方プロジェクト",
+        "東方"
+      ]
+    },
+    {
+      "id": "trpg_coc_murder_mystery",
+      "name": "TRPG/CoC/マダミス",
+      "category": "other",
+      "url": "",
+      "patterns": [
+        "TRPG",
+        "trpg",
+        "CoC",
+        "coc",
+        "マーダーミステリー",
+        "マダミス"
       ]
     },
     {
