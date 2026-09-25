@@ -9,5 +9,7 @@
   "scripts": {
     "detect": "node scripts/detectUnclassified.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "nodemailer": "^7.0.6"
+  }
 }
