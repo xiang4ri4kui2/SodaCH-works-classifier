@@ -10,6 +10,6 @@
     "detect": "node scripts/detectUnclassified.js"
   },
   "dependencies": {
-    "nodemailer": "^7.0.6"
+    "nodemailer": "^10.2.0"
   }
 }
