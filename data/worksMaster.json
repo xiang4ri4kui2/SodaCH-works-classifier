@@ -983,7 +983,7 @@
       "id": "cloud_dwellers",
       "name": "雲ぐらしの民",
       "category": "game",
-      "url": "https://store.steampowered.com/app/2134390/CLOUD_DWELLERS/",
+      "url": "https://store.steampowered.com/app/2134390/",
       "patterns": [
         "CLOUD DWELLERS",
         "cloud dwellers",
@@ -994,7 +994,7 @@
       "id": "shawarma_no_densetsu",
       "name": "シャワルマの伝説",
       "category": "game",
-      "url": "https://store.steampowered.com/app/3036080/__Shawarma_Legend/",
+      "url": "https://store.steampowered.com/app/3036080/",
       "patterns": [
         "シャワルマの伝説"
       ]
@@ -1009,10 +1009,31 @@
       ]
     },
     {
+      "id": "tanpopo_wa_taeru",
+      "name": "タンポポは耐える。",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/4368560/",
+      "patterns": [
+        "タンポポは耐える。",
+        "タンポポは耐える"
+      ]
+    },
+    {
+      "id": "legend_of_mortal",
+      "name": "活俠傳",
+      "category": "game",
+      "url": "https://store.steampowered.com/app/1859910/",
+      "patterns": [
+        "活俠傳",
+        "活侠伝",
+        "Legend of Mortal"
+      ]
+    },
+    {
       "id": "ib",
       "name": "Ib",
       "category": "game",
-      "url": "https://store.steampowered.com/app/1901370/Ib/",
+      "url": "https://store.steampowered.com/app/1901370/",
       "patterns": [
         "【Ib】",
         "イヴ",
@@ -1024,7 +1045,7 @@
       "id": "gensou_shoujo_taisen",
       "name": "幻想少女大戦 - DREAM OF THE STRAY DREAMER -",
       "category": "game",
-      "url": "https://store.steampowered.com/app/3575980/__DREAM_OF_THE_STRAY_DREAMER/",
+      "url": "https://store.steampowered.com/app/3575980/",
       "patterns": [
         "幻想少女大戦",
         "東方Project",
